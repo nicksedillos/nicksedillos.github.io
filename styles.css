@@ -1,7 +1,7 @@
 h1 {
     width: 60%;
     margin: 0.5em auto 0.5em auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Pacifico', cursive;
     font-size: 2em;
     font-weight: bold;
 }
@@ -11,7 +11,7 @@ p {
     width: 60%;
     font-size: 1em;
     margin: 0.5em auto 0.5em auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Nunito', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.5em;
     color: #888888;
 }
