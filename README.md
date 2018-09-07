@@ -33,3 +33,7 @@ Web developer portfolio, made for the University of Minnesota Full Stack Web Dev
 > * Mobile-first design: you should be proud to pull out your phone and share your portfolio site with a friend, family member, or someone at a meetup.
 > * Polish: choose a color palette for your site so it doesn't just look like the default bootstrap theme or an unstyled HTML site.
 > * Images: add a meaningful screenshot for each of your projects
+
+## My approach
+
+This site was constructed with simple HTML and a CSS reset. I also studied the Markdown documentation to format the README.
