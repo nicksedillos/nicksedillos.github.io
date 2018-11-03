@@ -1,5 +1,6 @@
 body {
 	background-image: url("assets/rawpixel-539818-unsplash.png");
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 }
