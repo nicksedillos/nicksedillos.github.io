@@ -5,13 +5,13 @@ body {
 }
 
 h1 {
-	font-family: 'Carter One', cursive;
+	font-family: 'Glegoo', serif;
 	font-size: 3em;
 	margin: 0.2em;
 }
 
 h2, p, ul {
-	font-family: 'Kosugi', sans-serif;
+	font-family: 'Arimo', sans-serif;
 }
 
 h2 {
@@ -52,5 +52,5 @@ footer {
 
 footer p {
 	font-size: 0.8em;
-	margin: 0.2em;
+	margin: 0.2em 1em;
 }
