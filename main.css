@@ -35,6 +35,9 @@ header, main, footer {
 	max-width: 1200px;
 	text-align: center;
 }
+header {
+	filter: blur(2px);
+}
 .allcaps {
 	text-transform: uppercase;
 }
