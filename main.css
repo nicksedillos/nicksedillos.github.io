@@ -1,4 +1,4 @@
-html, body, h1, h2, p, main {
+html, body, a, h1, h2, p, main {
 	background-color: #cccccc;
 	color: #666666;
 	font-family: 'Work Sans', sans-serif;
@@ -7,6 +7,9 @@ html, body, h1, h2, p, main {
 	line-height: normal;
 	margin: 0px;
 	text-align: center;
+}
+a:active, a:hover {
+	color: #000000;
 }
 h1, h2 {
 	font-family: 'Overpass', sans-serif;
@@ -17,7 +20,7 @@ h1 {
 	line-height: 3rem;
 	margin: 2rem 0 0 0;
 }
-h2 {
+h2, h2 a {
 	font-size: 2rem;
 	margin: 0.5rem 0 0.5rem 0;
 	}
