@@ -41,6 +41,13 @@ header, main, footer {
 header {
 	filter: blur(2px);
 }
+nav, nav a {
+	display: flex;
+	font-size: 2rem;
+	justify-content: space-evenly;
+	margin: 0 auto 0 auto;
+	max-width: 50%;
+}
 .allcaps {
 	text-transform: uppercase;
 }
