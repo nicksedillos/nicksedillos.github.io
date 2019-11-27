@@ -27,6 +27,7 @@ const phrases = [
 	`Hey buddy, I don't like it either`,
 	`I mean, I get what you're saying`,
 	`666 FORBIDDEN`
+	`testing 123`
 ];
 
 const random_index = Math.floor(Math.random()*phrases.length);
