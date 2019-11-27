@@ -26,7 +26,7 @@ const phrases = [
 	`Face down, ass up, that's the way we SEO`,
 	`Hey buddy, I don't like it either`,
 	`I mean, I get what you're saying`,
-	`666 FORBIDDEN`
+	`666 FORBIDDEN`,
 	`testing 123`
 ];
 
