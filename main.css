@@ -39,7 +39,7 @@ header, main, footer {
 	text-align: center;
 }
 header {
-	filter: blur(2px);
+	filter: blur(1px);
 }
 nav, nav a {
 	display: flex;
