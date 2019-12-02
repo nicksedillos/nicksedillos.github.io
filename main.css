@@ -34,7 +34,6 @@ p::first-line {
 header, main, footer {
 	margin: 0 auto 0 auto;
 	max-width: 95%;
-	text-align: center;
 }
 header {
 	margin: 0 auto 1rem auto;
@@ -48,6 +47,10 @@ nav, nav a {
 }
 footer p, footer a {
 	font-size: 0.8rem;
+}
+article {
+	margin: 0 auto 1rem auto;
+	max-width: 1200px;
 }
 article h1 {
 	font-size: 2rem;
