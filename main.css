@@ -1,5 +1,5 @@
 html, body, a, h1, h2, p, main {
-	background-color: #cccccc;
+	background-color: #eeeeee;
 	color: #666666;
 	font-family: 'Fantasque Sans Mono', monospace;
 	font-size: 1rem;
@@ -32,12 +32,12 @@ p::first-line {
 	text-indent: 2rem;
 }
 header, main, footer {
-	margin: 0px auto 0px auto;
+	margin: 0 auto 0 auto;
 	max-width: 95%;
 	text-align: center;
 }
 header {
-	filter: blur(1px);
+	margin: 0 auto 1rem auto;
 }
 nav, nav a {
 	display: flex;
@@ -46,9 +46,19 @@ nav, nav a {
 	margin: 0 auto 0 auto;
 	max-width: 50%;
 }
+footer p, footer a {
+	font-size: 0.8rem;
+}
+article h1 {
+	font-size: 2rem;
+	text-align: justify;
+}
 .allcaps {
 	text-transform: uppercase;
 }
 .centered {
+	text-align: center;
+}
+img.centered {
 	max-height: 700px;
 }
