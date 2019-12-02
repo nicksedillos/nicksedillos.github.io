@@ -1,7 +1,7 @@
 html, body, a, h1, h2, p, main {
 	background-color: #cccccc;
 	color: #666666;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Fantasque Sans Mono', monospace;
 	font-size: 1rem;
 	font-weight: normal;
 	line-height: normal;
@@ -12,13 +12,11 @@ a:active, a:hover {
 	color: #000000;
 }
 h1, h2 {
-	font-family: 'Overpass', sans-serif;
 	font-weight: bold;
 }
 h1 {
 	font-size: 5rem;
-	line-height: 3rem;
-	margin: 2rem 0 0 0;
+	margin: 1rem 0 0 0;
 }
 h2, h2 a {
 	font-size: 2rem;
