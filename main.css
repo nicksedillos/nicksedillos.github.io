@@ -7,21 +7,27 @@ html, body, a, h1, h2, p, main {
 	line-height: normal;
 	margin: 0px;
 	text-align: center;
+	text-decoration: none;
+}
+a {
+	text-decoration: underline;
 }
 a:active, a:hover {
 	color: #000000;
 }
-h1, h2 {
+h1, h1 a, h2 {
 	font-weight: bold;
 }
-h1 {
+h1, h1 a {
 	font-size: 5rem;
+	font-style: normal;
 	margin: 1rem 0 0 0;
+	text-decoration: none;
 }
 h2, h2 a {
 	font-size: 2rem;
 	margin: 0.5rem 0 0.5rem 0;
-	}
+}
 p {
 	font-size: 1rem;
 	font-weight: normal;
@@ -50,7 +56,7 @@ footer p, footer a {
 }
 article {
 	margin: 0 auto 1rem auto;
-	max-width: 1200px;
+	max-width: 60rem;
 }
 article h1 {
 	font-size: 2rem;
