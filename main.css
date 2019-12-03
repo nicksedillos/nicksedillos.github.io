@@ -4,6 +4,7 @@ html, body, a, h1, h2, p, main {
 	font-family: 'Fantasque Sans Mono', monospace;
 	font-size: 1rem;
 	font-weight: normal;
+	hyphens: auto;
 	line-height: normal;
 	margin: 0px;
 	text-align: center;
