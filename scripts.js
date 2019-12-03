@@ -1,6 +1,7 @@
 $(document).ready(function(){
-	$(`header`).load(`/header.html`);
-	$(`footer`).load(`/footer.html`);
+	$(`template#head`).load(`/templates/head.html`);
+	$(`header`).load(`/templates/header.html`);
+	$(`footer`).load(`/templates/footer.html`);
 	// Load any article as determined by its ID.
 	let articleIndex = $(`article`).attr(`id`);
 	$(`article`).load(`/articles/${articleIndex}.html`);
