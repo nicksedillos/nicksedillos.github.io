@@ -6,22 +6,27 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<!-- My scripts. -->
 		<script src="/scripts.js"></script>
+		<script src="/templates/image_gallery.js"></script>
 		<!-- Create an image_gallery array of objects. The sequence and captions for these images will be unique to this page. -->
 		<script>
-			const image_gallery = [
+			const gallery_contents = [
 				{ // 0
-					filename: `1986-00-00_mickey_mouse`,
+					filename: `1986-00-00_mickey_mouse.jpg`,
 					caption: `"Mickey Mouse", circa 1986`
 				},
 				{ // 1
-					filename: `1987-01-01_donald_duck_mickey_mouse`,
+					filename: `1987-01-01_donald_duck_mickey_mouse.jpg`,
 					caption: `"Donald Duck, Mickey Mouse, & Jiminy Cricket", 1987`
 				},
 				{ // 2
-					filename: `1988-01-01_doctor_fate`,
+					filename: `1988-01-01_doctor_fate.jpg`,
 					caption: `"Doctor Fate", circa 1988`
+				},
+				{ // 3
+					filename: `ghost.svg`,
+					caption: `"Ghost", 2019-10`
 				}
-			]
+			];
 		</script>
 		<template id="head"></template>
 	</head>
@@ -29,7 +34,7 @@
 		<header></header>
 		<main>
 			<!-- See: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
-			</div>
+			<div class="image_gallery" data-location="/sketchbook/"></div>
 		</main>
 		<footer></footer>
 	</body>
