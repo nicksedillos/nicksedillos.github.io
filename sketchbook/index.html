@@ -6,13 +6,29 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<!-- My scripts. -->
 		<script src="/scripts.js"></script>
+		<!-- Create an image_gallery array of objects. The sequence and captions for these images will be unique to this page. -->
+		<script>
+			const image_gallery = [
+				{ // 0
+					filename: `1986-00-00_mickey_mouse`,
+					caption: `"Mickey Mouse", circa 1986`
+				},
+				{ // 1
+					filename: `1987-01-01_donald_duck_mickey_mouse`,
+					caption: `"Donald Duck, Mickey Mouse, & Jiminy Cricket", 1987`
+				},
+				{ // 2
+					filename: `1988-01-01_doctor_fate`,
+					caption: `"Doctor Fate", circa 1988`
+				}
+			]
+		</script>
 		<template id="head"></template>
 	</head>
 	<body>
 		<header></header>
 		<main>
 			<!-- See: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
-			<img class="thumbnail" id="ghost" src="/ghost.svg" alt="Ghost">
 			</div>
 		</main>
 		<footer></footer>
