@@ -7,11 +7,12 @@
 	h1, h1 a, h2 { font-weight: bold; }
 		h1, h1 a { font-size: 3rem; font-style: normal; margin: 1rem 0 0 0; text-decoration: none; }
 		h2, h2 a { font-size: 1.5rem; margin: 0.5rem 0 0.5rem 0; }
+	p { font-size: 1rem; font-weight: normal; margin: 0 0 0.5rem 0; text-align: justify; }
+		p::first-line { text-indent: 2rem; }
 /* Classed elements */
 	img.centered { max-height: 30rem; }
 	img.thumbnail { height:10rem; padding:0.5em; }
-	p { font-size: 1rem; font-weight: normal; margin: 0 0 0.5rem 0; text-align: justify; }
-		p::first-line { text-indent: 2rem; }
+	span.close_button { text-align: right; }
 /* Sectioning elements */
 	header, main, footer { margin: 0 auto 0 auto; max-width: 95%; }
 		header { margin: 0 auto 1rem auto; }
@@ -22,3 +23,5 @@
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
+	/* .lightbox */
+	/* .lightbox_caption */

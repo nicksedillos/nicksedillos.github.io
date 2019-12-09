@@ -5,8 +5,28 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<!-- My scripts. -->
-		<script src="/scripts.js"></script>
-		<script src="/templates/modals/gallery_image.js"></script>
+		<script src="/load_main_templates.js" async="false"></script>
+		<script src="/templates/image_gallery.js" async="false"></script>
+		<!-- Contents of the image gallery. -->
+		<script>
+			const gallery_contents = [
+				{ // 0
+					fullsize: `/sketchbook/images/1986-00-00_mickey_mouse.jpg`,
+					smallsize: `/sketchbook/images/1986-00-00_mickey_mouse_sm.jpg`,
+					caption: `“Mickey Mouse”, circa 1986`
+				},
+				{ // 1
+					fullsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket.jpg`,
+					smallsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket_sm.jpg`,
+					caption: `“Donald Duck, Mickey Mouse, & Jiminy Cricket”, circa 1987`
+				},
+				{ // 2
+					fullsize: `/sketchbook/images/1989-00-00_outer_space.jpg`,
+					smallsize: `/sketchbook/images/1989-00-00_outer_space_sm.jpg`,
+					caption: `“Outer Space”, circa 1989`
+				}
+			];
+		</script>
 		<template id="head"></template>
 		<!-- Define the image_gallery map/object/array/whatever. -->
 		<script>
@@ -19,8 +39,7 @@
 		<header></header>
 		<main>
 			<!-- See: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
-			<!-- Somewhere in this document we need to describe an "image gallery" object which can be used to populate gallery_image.js. -->
-			</div>
+			<div id="image_gallery" data-location="/sketchbook/"></div>
 		</main>
 		<footer></footer>
 	</body>
