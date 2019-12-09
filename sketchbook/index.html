@@ -5,26 +5,25 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<!-- My scripts. -->
-		<script src="/scripts.js"></script>
-		<script src="/templates/image_gallery.js"></script>
+		<script src="/scripts.js" async="false"></script>
+		<script src="/templates/image_gallery.js" async="false"></script>
 		<!-- Create an image_gallery array of objects. The sequence and captions for these images will be unique to this page. -->
 		<script>
 			const gallery_contents = [
 				{ // 0
-					filename: `1986-00-00_mickey_mouse.jpg`,
-					caption: `"Mickey Mouse", circa 1986`
+					fullsize: `/sketchbook/images/1986-00-00_mickey_mouse.jpg`,
+					smallsize: `/sketchbook/images/1986-00-00_mickey_mouse_sm.jpg`,
+					caption: `“Mickey Mouse”, circa 1986`
 				},
 				{ // 1
-					filename: `1987-01-01_donald_duck_mickey_mouse.jpg`,
-					caption: `"Donald Duck, Mickey Mouse, & Jiminy Cricket", 1987`
+					fullsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket.jpg`,
+					smallsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket_sm.jpg`,
+					caption: `“Donald Duck, Mickey Mouse, & Jiminy Cricket”, circa 1987`
 				},
 				{ // 2
-					filename: `1988-01-01_doctor_fate.jpg`,
-					caption: `"Doctor Fate", circa 1988`
-				},
-				{ // 3
-					filename: `ghost.svg`,
-					caption: `"Ghost", 2019-10`
+					fullsize: `/sketchbook/images/1989-00-00_outer_space.jpg`,
+					smallsize: `/sketchbook/images/1989-00-00_outer_space_sm.jpg`,
+					caption: `“Outer Space”, circa 1989`
 				}
 			];
 		</script>
