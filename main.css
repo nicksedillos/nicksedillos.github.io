@@ -1,5 +1,5 @@
 /* Reset */
-	html, body, a, h1, h2, p, main { background-color: #eeeeee; color: #666666; font-family: 'Fantasque Sans Mono', monospace; font-size: 1rem; font-weight: normal; hyphens: auto; line-height: normal; margin: 0px; text-align: center; text-decoration: none; }
+	html, body, a, h1, h2, p, main { color: #666666; font-family: 'Fantasque Sans Mono', monospace; font-size: 1rem; font-weight: normal; hyphens: auto; line-height: normal; margin: 0px; text-align: center; text-decoration: none; }
 /* Global elements */
 	html { overflow-y: scroll; }
 	a { text-decoration: underline; }
@@ -23,5 +23,7 @@
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
-	/* .lightbox */
-	/* .lightbox_caption */
+/* IDs */
+div#caption_box { height: 10%; width: 60rem; position: fixed; right: 50%; bottom: 0; overflow: scroll; }
+div#lightbox { height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); text-align: center; }
+	div#lightbox img { height: 80%; position: relative; top: 5%; }
