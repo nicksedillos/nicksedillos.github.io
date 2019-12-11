@@ -7,7 +7,7 @@
 	h1, h1 a, h2 { font-weight: bold; }
 		h1, h1 a { font-size: 3rem; font-style: normal; margin: 1rem 0 0 0; text-decoration: none; }
 		h2, h2 a { font-size: 1.5rem; margin: 0.5rem 0 0.5rem 0; }
-	p { font-size: 1rem; font-weight: normal; margin: 0 0 0.5rem 0; text-align: justify; }
+	p { max-width: 60rem; font-size: 1rem; font-weight: normal; margin: 0 0.5rem 0.5rem 0.5rem; text-align: justify; }
 		p::first-line { text-indent: 2rem; }
 /* Classed elements */
 	img.centered { max-height: 30rem; }
@@ -24,6 +24,8 @@
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
 /* IDs */
-div#caption_box { height: 10%; width: 60rem; position: fixed; right: 50%; bottom: 0; overflow: scroll; }
 div#lightbox { height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); text-align: center; }
-	div#lightbox img { height: 80%; position: relative; top: 5%; }
+	div#lightbox_caption_box { height: 8%; max-width: 96%; margin: 2% auto; overflow-y: auto; }
+	div#lightbox_caption_box p {margin: 0 auto;}
+	div#lightbox_image_box { height: 86%; max-width: 96%; margin: 2% auto; position: relative; }
+		div#lightbox_image_box img { max-height: 100%; max-width: 96%; position: absolute; top: 50%; right: 50%; transform: translateY(-50%) translateX(50%); }
