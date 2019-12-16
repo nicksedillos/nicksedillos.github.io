@@ -13,7 +13,7 @@ Lightbox checklist
 1. <strike>Create the shadow overlay.</strike>
 2. <strike>Insert a dummy image and caption.</strike>
 3. <strike>Insert a close button.</strike>
-4. Figure out the z-index for all of the modal pieces. (May have to style each of the buttons individually).
+4. <strike>Figure out the z-index for all of the modal pieces. (May have to style each of the buttons individually).</strike>
 5. Make the close button functional.
 6. Make the thumbnails open the dummy modal when clicked.
 7. Make the thumbnails open the correct image and caption when clicked.
