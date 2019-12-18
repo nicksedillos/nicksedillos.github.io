@@ -15,7 +15,7 @@ const lightbox_next = function(){
 	display_lightbox();
 };
 
-// Display the lightbox at the current_lightbox_index number.
+// Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
 	document.getElementById("lightbox").style.display = "block";
 	$(`#lightbox_image_box`).html(`
@@ -23,7 +23,17 @@ const display_lightbox = function(){
 	`);
 	$(`#lightbox_caption_box`).html(`
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
-	`)
+	`);
+	if (current_lightbox_index > 0){
+		$(`.previous_button`).css(`display`, `block`);
+	} else {
+		$(`.previous_button`).css(`display`, `none`);
+	};
+	if ((current_lightbox_index + 1) < gallery_contents.length){
+		$(`.next_button`).css(`display`, `block`);
+	} else {
+		$(`.next_button`).css(`display`, `none`);
+	};
 };
 
 // Display the image gallery thumbnails with contents as defined by the gallery_contents array.
@@ -37,6 +47,5 @@ $(document).ready(function(){
 	$(`.thumbnail`).click(function(){
 		current_lightbox_index = Number($(this).attr(`data-index`));
 		display_lightbox(current_lightbox_index);
-		console.log(current_lightbox_index);
 	});
 });
