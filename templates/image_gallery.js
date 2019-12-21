@@ -1,6 +1,6 @@
 // Hide the lightbox.
 const close_lightbox = function(){
-	document.getElementById("lightbox").style.display = "none";
+	$(`#lightbox`).fadeOut(`fast`);
 };
 
 // Decrease the current_index_number by 1, then re-render lightbox.
@@ -18,7 +18,7 @@ const lightbox_next = function(){
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
 	// Display the lightbox.
-	document.getElementById("lightbox").style.display = "block";
+	$(`#lightbox`).fadeIn(`fast`);
 	// Populate with the correct fullsize image.
 	$(`#lightbox_image_box`).html(`
 		<img src="${gallery_contents[current_lightbox_index].fullsize}">

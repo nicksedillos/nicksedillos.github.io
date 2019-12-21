@@ -33,4 +33,4 @@ div#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0;
 	div#lightbox_caption_box { height: 8%; max-width: 96%; margin: 2% auto; overflow-y: auto; }
 		div#lightbox_caption_box p {margin: 0 auto; color: hsla(0, 0%, 60%, 100%)}
 	div#lightbox_image_box { height: 86%; max-width: 96%; margin: 2% auto; position: relative; }
-		div#lightbox_image_box img { max-height: 100%; max-width: 96%; position: absolute; top: 50%; right: 50%; transform: translateY(-50%) translateX(50%); }
+		div#lightbox_image_box img { max-height: 100%; max-width: 96%; position: absolute; top: 50%; right: 50%; transform: translateY(-50%) translateX(50%);}
