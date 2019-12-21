@@ -17,24 +17,50 @@ const lightbox_next = function(){
 
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
+	// Display the lightbox.
 	document.getElementById("lightbox").style.display = "block";
+	// Populate with the correct fullsize image.
 	$(`#lightbox_image_box`).html(`
 		<img src="${gallery_contents[current_lightbox_index].fullsize}">
 	`);
+	// Populate with the correct caption.
 	$(`#lightbox_caption_box`).html(`
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
 	`);
+	// Display a "previous" arrow button on all but the first image in the sequence.
 	if (current_lightbox_index > 0){
 		$(`.previous_button`).css(`display`, `block`);
 	} else {
 		$(`.previous_button`).css(`display`, `none`);
 	};
+	// Display a "next" arrow button on all but the last image in the sequence.
 	if ((current_lightbox_index + 1) < gallery_contents.length){
 		$(`.next_button`).css(`display`, `block`);
 	} else {
 		$(`.next_button`).css(`display`, `none`);
 	};
 };
+
+// Close the lightbox when Escape key is pressed.
+$(document).keyup(function(keypress){
+	if (keypress.key === "Escape"){
+		close_lightbox();
+	};
+});
+
+// Go to previous image when the left arrow key is pressed, unless already at the first image.
+$(document).keyup(function(keypress){
+	if ((keypress.key === "ArrowLeft") && (current_lightbox_index > 0)){
+		lightbox_previous();
+	};
+});
+
+// Go to next image when the right arrow key is pressed, unless already at the last image.
+$(document).keyup(function(keypress){
+	if ((keypress.key === "ArrowRight") && ((current_lightbox_index + 1) < gallery_contents.length)){
+		lightbox_next();
+	};
+});
 
 // Display the image gallery thumbnails with contents as defined by the gallery_contents array.
 $(document).ready(function(){
