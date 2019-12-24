@@ -13,6 +13,7 @@
 	img.centered { max-height: 30rem; }
 	img.thumbnail {height:10rem; padding:0.5em; cursor: pointer;}
 	p.centered {margin: 0 auto 0 auto;}
+		p.centered::first-line {text-indent: 0;}
 	span.close_button { text-align: right; }
 /* Sectioning elements */
 	header, main, footer { margin: 0 auto 0 auto; max-width: 95%; }
@@ -26,8 +27,8 @@
 	.centered { text-align: center; }
 /* IDs */
 div#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); backdrop-filter: blur(5px); text-align: center; color: hsla(0, 0%, 60%, 100%);}
-	div#lightbox_controls { z-index: 2; position: relative; }
-	div#lightbox_controls span.close_button { position: fixed; top: 2%; right: 2%; font-size: 2rem; cursor: pointer; }
+	div#lightbox_controls {z-index: 2; position: relative; font-family: 'Symbola Regular';}
+	div#lightbox_controls span.close_button { position: fixed; top: 2%; right: 2%; font-size: 2rem; cursor: pointer;}
 	div#lightbox_controls span.previous_button {display: none; position: fixed; top: 43%; left: 2%; font-size: 2rem; cursor: pointer;}
 	div#lightbox_controls span.next_button {display: none; position: fixed; top: 43%; right: 2%; font-size: 2rem; cursor: pointer;}
 	div#lightbox_caption_box { height: 8%; max-width: 96%; margin: 2% auto; overflow-y: auto; }
