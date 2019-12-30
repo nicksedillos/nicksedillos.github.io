@@ -1,3 +1,5 @@
+const lightbox = document.getElementById(`lightbox`);
+
 // Hide the lightbox.
 const close_lightbox = function(){
 	$(`#lightbox`).fadeOut(`fast`);
@@ -39,6 +41,16 @@ const display_lightbox = function(){
 	} else {
 		$(`.next_button`).css(`display`, `none`);
 	};
+	const lightbox_controls = document.getElementById(`lightbox_controls`);
+	// Make the lightbox controls visible for two seconds when the mouse moves over the lightbox.
+	lightbox.addEventListener(`mousemove`, event => {
+		lightbox_controls.classList.remove(`hidden`);
+		lightbox_controls.classList.add('visible');
+		window.setTimeout(function(){
+			lightbox_controls.classList.remove(`visible`);
+			lightbox_controls.classList.add(`hidden`);
+		}, 1000);
+	});
 };
 
 // Close the lightbox when Escape key is pressed.

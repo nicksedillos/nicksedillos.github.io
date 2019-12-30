@@ -25,6 +25,8 @@
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
+	.hidden {opacity:0; transition: opacity 250ms;}
+	.visible {opacity:1; transition: opacity 250ms;}
 /* IDs */
 div#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); backdrop-filter: blur(5px); text-align: center; color: hsla(0, 0%, 60%, 100%);}
 	div#lightbox_controls {z-index: 2; position: relative; font-family: 'Symbola Regular';}
