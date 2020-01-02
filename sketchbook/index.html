@@ -5,15 +5,71 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<!-- My scripts. -->
-		<script src="/scripts.js"></script>
+		<script src="/load_main_templates.js" async="false"></script>
+		<script src="/templates/image_gallery.js" async="false" defer></script>
+		<!-- Contents of the image gallery. -->
+		<script>
+			const gallery_contents = [
+				{ // 0
+					fullsize: `/sketchbook/images/1986-00-00_mickey_mouse.jpg`,
+					smallsize: `/sketchbook/images/1986-00-00_mickey_mouse_sm.jpg`,
+					caption: `“Mickey Mouse”, circa 1986`
+				},
+				{ // 1
+					fullsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket.jpg`,
+					smallsize: `/sketchbook/images/1987-00-00_donald_duck_mickey_mouse_and_jiminy_cricket_sm.jpg`,
+					caption: `“Donald Duck, Mickey Mouse, & Jiminy Cricket”, circa 1987`
+				},
+				{ // 2
+					fullsize: `/sketchbook/images/1988-00-00_horse_indian_and_tipi.jpg`,
+					smallsize: `/sketchbook/images/1988-00-00_horse_indian_and_tipi_sm.jpg`,
+					caption: `“Horse, Indian, & Tipi”, circa 1988`
+				},
+				{ // 3
+					fullsize: `/sketchbook/images/1989-00-00_outer_space.jpg`,
+					smallsize: `/sketchbook/images/1989-00-00_outer_space_sm.jpg`,
+					caption: `“Outer Space”, circa 1989`
+				},
+				{ // 4
+					fullsize: `/sketchbook/images/1993-00-00_ninas_creature.jpg`,
+					smallsize: `/sketchbook/images/1993-00-00_ninas_creature_sm.jpg`,
+					caption: `“Nina's Creature”, circa 1993`
+				},
+				{ // 5
+					fullsize: `/sketchbook/images/1993-05-00_zip_matic.jpg`,
+					smallsize: `/sketchbook/images/1993-05-00_zip_matic_sm.jpg`,
+					caption: `“Zip Matic”, circa 1992-08/1993-05`
+				},
+				{ // 6
+					fullsize: `/sketchbook/images/1997-11-00_manufactured_from_genuine_artificial_asbestos_fibers.jpg`,
+					smallsize: `/sketchbook/images/1997-11-00_manufactured_from_genuine_artificial_asbestos_fibers_sm.png`,
+					caption: `“Manufactured from Genuine Artificial Asbestos Fibers”, 1997-11`
+				},
+				{ // 7
+					fullsize: `/sketchbook/images/1997-11-00_margaritas_with_the_priestess_001.jpg`,
+					smallsize: `/sketchbook/images/1997-11-00_margaritas_with_the_priestess_001_sm.jpg`,
+					caption: `<em>Margaritas with the Priestess</em> page 001, 1997-11`
+				},
+				{ // 8
+					fullsize: `/sketchbook/images/1997-11-00_margaritas_with_the_priestess_002.jpg`,
+					smallsize: `/sketchbook/images/1997-11-00_margaritas_with_the_priestess_002_sm.jpg`,
+					caption: `<em>Margaritas with the Priestess</em> page 002, 1997-11`
+				},
+				{ // 9
+					fullsize: `/sketchbook/images/2001-00-00_untitled.jpg`,
+					smallsize: `/sketchbook/images/2001-00-00_untitled_sm.jpg`,
+					caption: `Circa 2001`
+				}
+			];
+		</script>
 		<template id="head"></template>
 	</head>
 	<body>
 		<header></header>
 		<main>
-			<!-- See: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
-			<img class="thumbnail" id="ghost" src="/ghost.svg" alt="Ghost">
-			</div>
+			<h1>Sketchbook 1986–2001</h1>
+			<div id="image_gallery" data-location="/sketchbook/"></div>
+			<div id="lightbox"></div>
 		</main>
 		<footer></footer>
 	</body>

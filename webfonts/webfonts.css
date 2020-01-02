@@ -34,3 +34,7 @@
   font-weight: 700;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Symbola Regular';
+  src: url('Symbola.ttf') format('truetype');
+}
