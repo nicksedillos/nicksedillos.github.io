@@ -9,6 +9,7 @@
 		h2, h2 a { font-size: 1.5rem; margin: 0.5rem 0 0.5rem 0; }
 	img {max-width: 95%;}
 		img.centered { max-height: 30rem; }
+		img.site_header {height: 3rem; margin:0 auto 0.5rem 0;}
 		img.thumbnail {height:10rem; padding:0.5em; cursor: pointer;}
 	p {max-width: 60rem; font-size: 1rem; font-weight: normal; margin: 0 0.5rem 0.5rem 0.5rem; text-align: justify;}
 		p::first-line { text-indent: 2rem; }
@@ -17,7 +18,7 @@
 		p.small, p.small a {font-size: 0.6rem;}
 	span.close_button { text-align: right; }
 /* Sectioning elements */
-	header {margin: 0 auto 1rem auto; max-width: 95%;}
+	header {margin: 0.5rem auto 1rem auto; max-width: 95%;}
 		header h1, header h1 a {font-size: 3rem;}
 	nav {margin: 0 auto 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly;}
 		nav a {margin: 0 1rem 0 1rem; font-size: 1.6rem;}
