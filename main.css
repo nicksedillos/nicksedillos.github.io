@@ -10,7 +10,6 @@
 		h2, h2 a, h2 em { font-size: 1.5rem; margin: 0.5rem 0 0.5rem 0; }
 	img {max-width: 95%;}
 		img.centered { max-height: 30rem; }
-		img.site_header {height: 3rem; margin:0 auto 0.5rem 0;}
 		img.thumbnail {height:10rem; padding:0.5em; cursor: pointer;}
 	p {max-width: 60rem; font-size: 1rem; font-weight: normal; margin: 0 0.5rem 0.5rem 0.5rem; text-align: justify;}
 		p::first-line { text-indent: 2rem; }
@@ -18,7 +17,7 @@
 			p.centered::first-line {text-indent: 0;}
 		p.small, p.small a {font-size: 0.6rem;}
 	span.close_button { text-align: right; }
-	ul {text-align: left;}
+	ul {text-align: left; list-style-position: inside;}
 /* Sectioning elements */
 	header {margin: 0.5rem auto 1rem auto; max-width: 95%;}
 		header h1, header h1 a {font-size: 3rem;}
@@ -35,6 +34,7 @@
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
 	.hidden {opacity:0; transition: opacity 250ms;}
+	.page_header {height: 3rem; margin:0 auto 0.5rem 0;}
 	.visible {opacity:1; transition: opacity 250ms;}
 /* IDs */
 	div#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); backdrop-filter: blur(5px); text-align: center; color: hsla(0, 0%, 60%, 100%);}
