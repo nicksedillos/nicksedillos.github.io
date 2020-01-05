@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$(`header`).load(`/templates/header.html`);
 	$(`footer`).load(`/templates/footer.html`);
 	// Load each article by its ID.
-	let articleIndex = $(`article`).attr(`id`);
-	$(`article`).load(`/articles/${articleIndex}.html`);
+	document.querySelectorAll(`article`).forEach(function(element){
+		$(element).load(`/articles/${element.id}.html`);
+	});
 });
