@@ -1,5 +1,5 @@
 /* Reset */
-	html, body, a, em, h1, h2, p, main, nav {color: #666666; font-family: 'Fantasque Sans Mono', monospace; font-size: 1rem; font-weight: normal; hyphens: auto; line-height: normal; margin: 0px; padding: 0; text-align: center; text-decoration: none;}
+	html, body, a, em, h1, h2, p, main, nav, ul {color: #666666; font-family: 'Fantasque Sans Mono', monospace; font-size: 1rem; font-weight: normal; hyphens: auto; line-height: normal; margin: 0px; padding: 0; text-align: center; text-decoration: none;}
 /* Global elements */
 	html {overflow-y: scroll;}
 	a {text-decoration: underline;}
@@ -18,6 +18,7 @@
 			p.centered::first-line {text-indent: 0;}
 		p.small, p.small a {font-size: 0.6rem;}
 	span.close_button { text-align: right; }
+	ul {text-align: left;}
 /* Sectioning elements */
 	header {margin: 0.5rem auto 1rem auto; max-width: 95%;}
 		header h1, header h1 a {font-size: 3rem;}
@@ -28,9 +29,8 @@
 	main {margin: 0 auto 0 auto; max-width: 95%;}
 	footer {margin: 2rem auto 1rem auto; max-width: 95%;}
 		footer p, footer a { font-size: 0.8rem; }
-	article { margin: 0 auto 1rem auto; max-width: 60rem; }
+	article { margin: 2rem auto 1rem auto; max-width: 60rem; }
 		article h1, article h2 {text-align: left;}
-		article h1 {margin: 2rem 0 0 0;}
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
