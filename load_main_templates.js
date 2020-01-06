@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$(`template#head`).load(`/templates/head.html`);
 	$(`header`).load(`/templates/header.html`);
 	$(`footer`).load(`/templates/footer.html`);
-	// Load each article by its ID, then prepend an anchor link and append a link to the top of the page and a divider.
+	// Load each article by its ID, then prepend an anchor link and append a link to reload the page (i.e., the top)and a divider.
 	document.querySelectorAll(`article`).forEach(function(element){
 		$.ajax(`/articles/${element.id}.html`).done(function(content){
 			$(element).html(content);
@@ -12,7 +12,7 @@ $(document).ready(function(){
 				<a id="#${element.id}"></a>
 			`);
 			$(element).append(`
-				<p><a href="#top">^</a></p>
+				<p><a href=".">^</a></p>
 				<p class="centered">⁂</p>
 			`);
 		});
