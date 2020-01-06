@@ -12,7 +12,7 @@ $(document).ready(function(){
 				<a id="#${element.id}"></a>
 			`);
 			$(element).append(`
-				<p><a href=".">^</a></p>
+				<p><a class="link_to_top" href=".">^</a></p>
 				<p class="centered">⁂</p>
 			`);
 		});

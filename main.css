@@ -4,6 +4,7 @@
 	html {overflow-y: scroll;}
 	a {text-decoration: underline;}
 		a:active, a:hover {color: #000000;}
+		a.link_to_top {text-decoration: none;}
 	em {font-style: italic;}
 	h1, h1 a, h2 {font-weight: normal;}
 		h1, h1 a { font-size: 2rem; font-style: normal; margin: 1rem 0 0 0; text-decoration: none; }
