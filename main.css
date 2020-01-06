@@ -27,7 +27,6 @@
 		nav a:last-child {margin-right: 0;}
 	main {margin: 0 auto 0 auto; max-width: 95%;}
 	footer {margin: 2rem auto 1rem auto; max-width: 95%;}
-		footer p, footer a { font-size: 0.8rem; }
 	article {margin: 0 auto 0 auto; max-width: 60rem;}
 		article h1, article h2 {text-align: left;}
 /* Abstract classes */
