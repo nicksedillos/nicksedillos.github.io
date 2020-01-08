@@ -33,6 +33,7 @@
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
+	.glyph {height: 1rem;}
 	.hidden {opacity:0; transition: opacity 250ms;}
 	.page_header {height: 3rem; margin:0 auto 0.5rem 0;}
 	.visible {opacity:1; transition: opacity 250ms;}
