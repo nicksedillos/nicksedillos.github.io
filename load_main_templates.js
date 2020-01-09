@@ -15,9 +15,8 @@ const load_articles = function(){
 				<p><a class="link_to_top" href=".">^</a></p>
 				<svg class="glyph" data="divider">
 			`);
-		});
+		}).done(load_glyphs());
 	});
-	load_glyphs();
 };
 
 // Load templates when called in the document.
