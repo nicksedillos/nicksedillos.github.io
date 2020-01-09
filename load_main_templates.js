@@ -1,4 +1,9 @@
-const load_articles = new Promise((result) => {
+const load_glyphs = function(){
+	let glyph_index = $(`span.glyph`).attr(`data`);
+	$(`span.glyph`).load(`/glyphs/${glyph_index}.svg`);
+};
+
+const load_articles = function(){
 	document.querySelectorAll(`article`).forEach(function(element){
 		$.ajax(`/articles/${element.id}.html`).done(function(content){
 			$(element).html(content);
@@ -8,15 +13,11 @@ const load_articles = new Promise((result) => {
 			`);
 			$(element).append(`
 				<p><a class="link_to_top" href=".">^</a></p>
-				<span class="glyph" data="divider"></span>
+				<svg class="glyph" data="divider">
 			`);
 		});
 	});
-});
-
-const load_glyphs = function(){
-	let glyph_index = $(`span.glyph`).attr(`data`);
-	$(`span.glyph`).load(`/glyphs/${glyph_index}.svg`);
+	load_glyphs();
 };
 
 // Load templates when called in the document.
@@ -25,5 +26,5 @@ $(document).ready(function(){
 	$(`header`).load(`/templates/header.html`);
 	$(`footer`).load(`/templates/footer.html`);
 	// Load each article by its ID, then prepend an anchor link and append a link to reload the page (i.e., the top)and a divider.
-	load_articles.then(load_glyphs);
+	load_articles();
 });
