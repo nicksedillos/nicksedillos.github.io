@@ -23,18 +23,17 @@
 	header {margin: 0.5rem auto 1rem auto; max-width: 95%;}
 		header h1, header h1 a {font-size: 3rem;}
 	nav {margin: 0 auto 0 auto; display: flex; flex-wrap: wrap; justify-content: space-evenly;}
-		nav a {margin: 0 1rem 0 1rem; font-size: 1.6rem;}
+		nav a {margin: 0 1rem 0 1rem; font-size: 1.5rem;}
 		nav a:first-child {margin-left: 0;}
-		nav a:last-child {margin-right: 0;}
-	main {margin: 0 auto 0 auto; max-width: 95%;}
 	footer {margin: 1rem auto 1rem auto; max-width: 95%;}
 	article {margin: 0 auto 0 auto; max-width: 60rem;}
 		article h1, article h2 {text-align: left;}
 /* Abstract classes */
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
-	.glyph {height: 1rem;}
 	.hidden {opacity:0; transition: opacity 250ms;}
+	.inline-1rem svg {height: 1rem;}
+	.inline-1-5rem svg {height: 1.5rem;}
 	.page_header {height: 3rem; margin:0 auto 0.5rem 0;}
 	.visible {opacity:1; transition: opacity 250ms;}
 /* IDs */
