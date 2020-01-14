@@ -1,9 +1,9 @@
-const load_glyphs = function(){
-	$(`span.glyph`).each(function(){
-		let glyph_index = $(this).attr(`data`);
-		$(this).load(`/glyphs/${glyph_index}.svg`);
-	});
-};
+// const load_glyphs = function(){
+// 	$(`span.glyph`).each(function(){
+// 		let glyph_index = $(this).attr(`data`);
+// 		$(this).load(`/glyphs/${glyph_index}.svg`);
+// 	});
+// };
 
 const load_articles = function(){
 	document.querySelectorAll(`article`).forEach(function(element){
@@ -19,7 +19,7 @@ const load_articles = function(){
 				<p><a class="link_to_top" href=".">^</a></p>
 				<span class="glyph inline-1rem" data="divider">
 			`);
-			load_glyphs();
+			// load_glyphs();
 		});
 	});
 };

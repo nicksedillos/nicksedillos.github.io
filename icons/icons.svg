@@ -1,4 +1,4 @@
-<svg>
+<svg xmlns="http://www.w3.org/2000/svg">
 	<g id="lightbox_control_buttons">
 		<symbol id="close_button" viewBox="0 0 1080 1080">
 			<path d="M1080,1080H925.69L540,699.11,159.11,1080H0V925.69L380.87,540,0,159.11V0H159.11L540,380.89,925.69,0H1080V159.11L699.08,540,1080,920.89Z"/>
