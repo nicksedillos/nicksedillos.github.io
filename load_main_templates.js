@@ -10,7 +10,9 @@ const load_articles = function(){
 			// Links to top and dividers at end of articles
 			$(element).append(`
 				<p><a class="link_to_top" href=".">^</a></p>
-				<span class="glyph inline-1rem" data="divider">
+				<svg class="icon">
+					<use href="/icons/icons.svg#divider"/>
+				</svg>
 			`);
 		});
 	});
