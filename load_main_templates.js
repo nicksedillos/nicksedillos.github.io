@@ -11,7 +11,7 @@ const load_articles = function(){
 			$(element).append(`
 				<p><a class="link_to_top" href=".">^</a></p>
 				<svg class="icon">
-					<use href="/icons/icons.svg#divider"/>
+					<use href="/icons.svg#divider"/>
 				</svg>
 			`);
 		});
