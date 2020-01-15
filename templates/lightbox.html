@@ -1,7 +1,13 @@
 <div id="lightbox_controls" class="hidden">
-	<span class="close_button glyph inline-1rem" onclick="close_lightbox()" data="cancellation_x"></span>
-	<span class="previous_button" onclick="lightbox_previous()">⮜</span>
-	<span class="next_button" onclick="lightbox_next()">⮞</span>
+	<svg class="close_button" onclick="close_lightbox()">
+		<use href="/icons/icons.svg#close_button"/>
+	</svg>
+	<svg class="previous_button" onclick="lightbox_previous()">
+		<use href="/icons/icons.svg#previous_button"/>
+	</svg>
+	<svg class="next_button" onclick="lightbox_next()">
+		<use href="/icons/icons.svg#next_button"/>
+	</svg>
 </div>
 <div id="lightbox_image_box"></div>
 <div id="lightbox_caption_box"></div>
