@@ -20,6 +20,7 @@
 	span.close_button { text-align: right; }
 	svg.icon {height:1rem; width:1rem;}
 	ul {text-align: left; list-style-position: inside;}
+		ul#table_of_contents {text-align: center; list-style-type: none; line-height: 1.5rem;}
 /* Sectioning elements */
 	header {margin: 0.5rem auto 1rem auto; max-width: 95%;}
 		header h1, header h1 a {font-size: 3rem;}
