@@ -1,20 +1,40 @@
-const load_articles = function(){
+const articles = [];
+
+const collate_articles = function(){
 	document.querySelectorAll(`article`).forEach(function(element){
-		$.ajax(`/articles/${element.id}.html`).done(function(content){
-			$(element).html(content);
-		}).done(function(){
-			// Anchor tags at start of articles
-			$(element).prepend(`
-				<a id="#${element.id}"></a>
-			`);
-			// Links to top and dividers at end of articles
-			$(element).append(`
-				<p><a class="link_to_top" href=".">^</a></p>
-				<svg class="icon">
-					<use href="/icons.svg#divider"/>
-				</svg>
-			`);
+		const next_article = {
+			id: (`${element.id}`),
+			title: (`${element.title}`)
+		};
+		articles.push(next_article);
+		articles.forEach(function(article){
+			// Place body of article within its <article> element.
+			$.ajax(`/articles/${article.id}.html`).done(function(content){
+				$(element).html(content);
+			}).done(function(){
+				// Insert anchor tags at start of articles.
+				$(element).prepend(`
+					<a id="#${element.id}"></a>
+				`);
+				// Add links to top and dividers at end of articles.
+				$(element).append(`
+					<p><a class="link_to_top" href=".">^</a></p>
+					<svg class="icon">
+						<use href="/icons.svg#divider"/>
+					</svg>
+				`);
+			});
 		});
+	});
+};
+
+const build_table_of_contents = function(){
+	// Assemble the ToC from the gathered data.
+	articles.forEach(function(article){
+		table_of_contents = document.querySelector(`ul#table_of_contents`);
+		$(table_of_contents).append(`
+			<li><a href="#${article.id}">${article.title}</a></li>
+		`);
 	});
 };
 
@@ -23,5 +43,6 @@ $(document).ready(function(){
 	$(`template#head`).load(`/templates/head.html`);
 	$(`header`).load(`/templates/header.html`);
 	$(`footer`).load(`/templates/footer.html`);
-	load_articles();
+	collate_articles();
+	build_table_of_contents();
 });
