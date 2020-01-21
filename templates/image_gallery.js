@@ -54,7 +54,6 @@ function display_lightbox(){
 	} else {
 		$(`.next_button`).css(`display`, `none`);
 	};
-	const lightbox_controls = document.getElementById(`lightbox_controls`);
 	// Make the lightbox controls visible for two seconds when the mouse moves over the lightbox.
 	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
 };
