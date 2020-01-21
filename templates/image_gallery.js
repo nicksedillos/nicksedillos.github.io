@@ -20,7 +20,7 @@ const lightbox_next = function(){
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
-	const lightbox_current_image  = document.querySelector(`#lightbox_image box img`);
+	const lightbox_current_image = document.querySelector(`#lightbox_image box img`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
 	// Close the lightbox when user clicks on the background.
@@ -43,6 +43,9 @@ const display_lightbox = function(){
 	};
 	// Display a "next" arrow button on all but the last image in the sequence.
 	if ((current_lightbox_index + 1) < gallery_contents.length){
+		// lightbox_current_image.addEventListener(`mouseup`, event => {
+		// 	lightbox_next();
+		// });
 		$(`.next_button`).css(`display`, `block`);
 	} else {
 		$(`.next_button`).css(`display`, `none`);
