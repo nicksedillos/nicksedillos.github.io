@@ -54,8 +54,9 @@ function display_lightbox(){
 	} else {
 		$(`.next_button`).css(`display`, `none`);
 	};
-	// Make the lightbox controls visible for two seconds when the mouse moves over the lightbox.
+	// Wake the lightbox controls on click or mousemove.
 	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
+	lightbox.addEventListener(`mouseup`, lightbox_wake_controls);
 };
 
 // Close the lightbox when Escape key is pressed.
