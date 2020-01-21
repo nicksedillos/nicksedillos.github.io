@@ -1,24 +1,24 @@
 const lightbox = document.getElementById(`lightbox`);
 
 // Hide the lightbox.
-const close_lightbox = function(){
+function close_lightbox(){
 	$(`#lightbox`).fadeOut(`fast`);
 };
 
 // Decrease the current_index_number by 1, then re-render lightbox.
-const lightbox_previous = function(){
+function lightbox_previous(){
 	current_lightbox_index = current_lightbox_index - 1;
 	display_lightbox();
 };
 
 // Increase the current_index_number by 1, then re-render lightbox.
-const lightbox_next = function(){
+function lightbox_next(){
 	current_lightbox_index = current_lightbox_index + 1;
 	display_lightbox();
 };
 
 // Make the lightbox controls visible for one second, then hide them again.
-const lightbox_wake_controls = function(){
+function lightbox_wake_controls(){
 	lightbox_controls.classList.remove(`hidden`);
 	lightbox_controls.classList.add('visible');
 	window.setTimeout(function(){
@@ -28,7 +28,7 @@ const lightbox_wake_controls = function(){
 };
 
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
-const display_lightbox = function(){
+function display_lightbox(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
