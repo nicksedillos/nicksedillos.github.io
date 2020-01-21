@@ -20,6 +20,7 @@ const lightbox_next = function(){
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
+	const lightbox_current_image  = document.querySelector(`#lightbox_image box img`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
 	// Close the lightbox when user clicks on the background.
