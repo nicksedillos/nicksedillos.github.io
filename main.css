@@ -33,12 +33,14 @@
 	article {margin: 0 auto 0 auto; max-width: 60rem;}
 		article h1, article h2 {text-align: left;}
 /* Abstract classes */
+	.absent {display: none;}
 	.allcaps { text-transform: uppercase; }
 	.centered { text-align: center; }
 	.hidden {opacity:0; transition: opacity 250ms;}
 	.inline-1rem svg {height: 1rem;}
 	.inline-1-5rem svg {height: 1.5rem;}
 	.page_header {height: 3rem; margin:0 auto 0.5rem 0;}
+	.present {display: block;}
 	.visible {opacity:1; transition: opacity 250ms;}
 /* IDs */
 	div#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); backdrop-filter: blur(5px); text-align: center; color: hsla(0,0%,60%,100%); fill: hsla(0,0%,60%,100%);}
