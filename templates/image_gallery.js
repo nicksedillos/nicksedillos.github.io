@@ -19,8 +19,13 @@ const lightbox_next = function(){
 
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 const display_lightbox = function(){
+	const lightbox_background = document.getElementById(`lightbox_background`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
+	// Close the lightbox when user clicks on the background.
+	lightbox_background.addEventListener(`mouseup`, event => {
+		close_lightbox();
+	});
 	// Populate with the correct fullsize image.
 	$(`#lightbox_image_box`).html(`
 		<img src="${gallery_contents[current_lightbox_index].fullsize}">
