@@ -31,6 +31,8 @@ function lightbox_wake_controls(){
 function display_lightbox(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
 	const lightbox_current_image = document.getElementById(`lightbox_current_image`);
+	const lightbox_previous_button = document.querySelector(`.previous_button`);
+	const lightbox_next_button = document.querySelector(`.next_button`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
 	// Close the lightbox when user clicks on the background.
