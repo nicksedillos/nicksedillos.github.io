@@ -30,13 +30,14 @@ function lightbox_wake_controls(){
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 function display_lightbox(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
+	const lightbox_current_image = document.getElementById(`lightbox_current_image`);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
 	// Close the lightbox when user clicks on the background.
 	lightbox_background.addEventListener(`mouseup`, close_lightbox);
 	// Populate with the correct fullsize image.
 	$(`#lightbox_image_box`).html(`
-		<img src="${gallery_contents[current_lightbox_index].fullsize}">
+		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
 	`);
 	// Populate with the correct caption.
 	$(`#lightbox_caption_box`).html(`
