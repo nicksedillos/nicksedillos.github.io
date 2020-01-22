@@ -1,6 +1,6 @@
 const articles = [];
 
-const collate_articles = function(){
+function collate_articles(){
 	document.querySelectorAll(`article`).forEach(function(element){
 		const next_article = {
 			id: (`${element.id}`),
@@ -28,7 +28,7 @@ const collate_articles = function(){
 	});
 };
 
-const build_table_of_contents = function(){
+function build_table_of_contents(){
 	// Assemble the ToC from the gathered data.
 	articles.forEach(function(article){
 		table_of_contents = document.querySelector(`ul#table_of_contents`);
