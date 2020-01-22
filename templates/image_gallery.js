@@ -40,16 +40,10 @@ function display_lightbox(){
 	// Close the lightbox when user clicks on the background.
 	lightbox_background.addEventListener(`mouseup`, close_lightbox);
 	// Populate with the correct fullsize image.
-	// $(`#lightbox_image_box`).html(`
-	// 	<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
-	// `);
 	lightbox_image_box.innerHTML = `
 		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
 	`;
 	// Populate with the correct caption.
-	// $(`#lightbox_caption_box`).html(`
-	// 	<p>${gallery_contents[current_lightbox_index].caption}</p>
-	// `);
 	lightbox_caption_box.innerHTML = `
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
 	`;
