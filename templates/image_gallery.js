@@ -30,7 +30,9 @@ function lightbox_wake_controls(){
 // Display the lightbox at the current_lightbox_index number. Show or hide arrow buttons depending on position in the sequence.
 function display_lightbox(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
+	const lightbox_caption_box = document.getElementById(`lightbox_caption_box`);
 	const lightbox_current_image = document.getElementById(`lightbox_current_image`);
+	const lightbox_image_box = document.getElementById(`lightbox_image_box`);
 	const lightbox_previous_button = document.querySelector(`.previous_button`);
 	const lightbox_next_button = document.querySelector(`.next_button`);
 	// Display the lightbox.
@@ -38,13 +40,19 @@ function display_lightbox(){
 	// Close the lightbox when user clicks on the background.
 	lightbox_background.addEventListener(`mouseup`, close_lightbox);
 	// Populate with the correct fullsize image.
-	$(`#lightbox_image_box`).html(`
+	// $(`#lightbox_image_box`).html(`
+	// 	<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
+	// `);
+	lightbox_image_box.innerHTML = `
 		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
-	`);
+	`;
 	// Populate with the correct caption.
-	$(`#lightbox_caption_box`).html(`
+	// $(`#lightbox_caption_box`).html(`
+	// 	<p>${gallery_contents[current_lightbox_index].caption}</p>
+	// `);
+	lightbox_caption_box.innerHTML = `
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
-	`);
+	`;
 	// Display a "previous" arrow button on all but the first image in the sequence.
 	if (current_lightbox_index > 0){
 		lightbox_previous_button.classList.remove(`absent`);
