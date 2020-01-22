@@ -47,15 +47,23 @@ function display_lightbox(){
 	`);
 	// Display a "previous" arrow button on all but the first image in the sequence.
 	if (current_lightbox_index > 0){
-		$(`.previous_button`).css(`display`, `block`);
+		// $(`.previous_button`).css(`display`, `block`);
+		lightbox_previous_button.classList.remove(`absent`);
+		lightbox_previous_button.classList.add(`present`);
 	} else {
-		$(`.previous_button`).css(`display`, `none`);
+		// $(`.previous_button`).css(`display`, `none`);
+		lightbox_previous_button.classList.remove(`present`);
+		lightbox_previous_button.classList.add(`absent`);
 	};
 	// Display a "next" arrow button on all but the last image in the sequence.
 	if ((current_lightbox_index + 1) < gallery_contents.length){
-		$(`.next_button`).css(`display`, `block`);
+		// $(`.next_button`).css(`display`, `block`);
+		lightbox_next_button.classList.remove(`absent`);
+		lightbox_next_button.classList.add(`present`);
 	} else {
-		$(`.next_button`).css(`display`, `none`);
+		// $(`.next_button`).css(`display`, `none`);
+		lightbox_next_button.classList.remove(`present`);
+		lightbox_next_button.classList.add(`absent`);
 	};
 	// Wake the lightbox controls on click or mousemove.
 	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
