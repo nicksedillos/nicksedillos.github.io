@@ -39,44 +39,32 @@ function display_lightbox(){
 	// Close the lightbox when user clicks on the background.
 	lightbox_background.addEventListener(`mouseup`, close_lightbox);
 	// Populate with the correct fullsize image.
-	// lightbox_image_box.innerHTML = `
-	// 	<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
-	// `;
+	lightbox_image_box.innerHTML = `
+		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
+	`;
 	// Populate with the correct caption.
-	// lightbox_caption_box.innerHTML = `
-	// 	<p>${gallery_contents[current_lightbox_index].caption}</p>
-	// `;
-	// Attempt to rewrite the above as a promise
-	async function populate_image_and_caption(){
-		let response = await lightbox_image_box.innerHTML = `
-			<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
-		`;
-		lightbox_caption_box.innerHTML = `
-	 		<p>${gallery_contents[current_lightbox_index].caption}</p>
-	 	`;
+	lightbox_caption_box.innerHTML = `
+		<p>${gallery_contents[current_lightbox_index].caption}</p>
+	`;
+	// Display a "previous" arrow button on all but the first image in the sequence.
+	if (current_lightbox_index > 0){
+		lightbox_previous_button.classList.remove(`absent`);
+		lightbox_previous_button.classList.add(`present`);
+	} else {
+		lightbox_previous_button.classList.remove(`present`);
+		lightbox_previous_button.classList.add(`absent`);
 	};
-	function set_prev_next_arrows(){
-		// Display a "previous" arrow button on all but the first image in the sequence.
-		if (current_lightbox_index > 0){
-			lightbox_previous_button.classList.remove(`absent`);
-			lightbox_previous_button.classList.add(`present`);
-		} else {
-			lightbox_previous_button.classList.remove(`present`);
-			lightbox_previous_button.classList.add(`absent`);
-		};
-		// Display a "next" arrow button on all but the last image in the sequence.
-		if ((current_lightbox_index + 1) < gallery_contents.length){
-			lightbox_current_image.addEventListener(`mouseup`, event => {
-				console.log(`Click detected.`);
-			});
-			lightbox_next_button.classList.remove(`absent`);
-			lightbox_next_button.classList.add(`present`);
-		} else {
-			lightbox_next_button.classList.remove(`present`);
-			lightbox_next_button.classList.add(`absent`);
-		};
+	// Display a "next" arrow button on all but the last image in the sequence.
+	if ((current_lightbox_index + 1) < gallery_contents.length){
+		// lightbox_current_image.addEventListener(`mouseup`, event => {
+		// 	console.log(`Click detected.`);
+		// });
+		lightbox_next_button.classList.remove(`absent`);
+		lightbox_next_button.classList.add(`present`);
+	} else {
+		lightbox_next_button.classList.remove(`present`);
+		lightbox_next_button.classList.add(`absent`);
 	};
-	populate_image_and_caption().then(() => set_prev_next_arrows());
 	// Wake the lightbox controls on click or mousemove.
 	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
 	lightbox.addEventListener(`mouseup`, lightbox_wake_controls);
