@@ -31,7 +31,6 @@ function lightbox_wake_controls(){
 function display_lightbox(){
 	const lightbox_background = document.getElementById(`lightbox_background`);
 	const lightbox_caption_box = document.getElementById(`lightbox_caption_box`);
-	const lightbox_current_image = document.getElementById(`lightbox_current_image`);
 	const lightbox_image_box = document.getElementById(`lightbox_image_box`);
 	const lightbox_previous_button = document.querySelector(`.previous_button`);
 	const lightbox_next_button = document.querySelector(`.next_button`);
