@@ -39,12 +39,9 @@ function display_lightbox(){
 	// Close the lightbox when user clicks on the background.
 	lightbox_background.addEventListener(`mouseup`, close_lightbox);
 	// Populate with the correct fullsize image.
-	async function get_image(){
-		lightbox_image_box.innerHTML = `
-			<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
-		`;
-		console.log(`Got image.`); // Logs twice?
-	};
+	lightbox_image_box.innerHTML = `
+		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
+	`;
 	// Populate with the correct caption.
 	lightbox_caption_box.innerHTML = `
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
@@ -58,21 +55,17 @@ function display_lightbox(){
 		lightbox_previous_button.classList.add(`absent`);
 	};
 	// Display a "next" arrow button on all but the last image in the sequence.
-	async function add_prevous_and_next(){
-		if ((current_lightbox_index + 1) < gallery_contents.length){
-			await get_image();
-			console.log(lightbox_current_image); // Returns null on first opening lightbox.
-			lightbox_current_image.addEventListener(`mouseup`, event => {
-				console.log(`Click detected.`); // Broken
-			});
-			lightbox_next_button.classList.remove(`absent`);
-			lightbox_next_button.classList.add(`present`);
-		} else {
-			lightbox_next_button.classList.remove(`present`);
-			lightbox_next_button.classList.add(`absent`);
-		};
+	if ((current_lightbox_index + 1) < gallery_contents.length){
+		// lightbox_current_image.addEventListener(`mouseup`, event => {
+		// 	console.log(`Click detected.`);
+		// });
+		lightbox_next_button.classList.remove(`absent`);
+		lightbox_next_button.classList.add(`present`);
+	} else {
+		lightbox_next_button.classList.remove(`present`);
+		lightbox_next_button.classList.add(`absent`);
 	};
-	get_image().then(add_prevous_and_next());	// Wake the lightbox controls on click or mousemove.
+	// Wake the lightbox controls on click or mousemove.
 	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
 	lightbox.addEventListener(`mouseup`, lightbox_wake_controls);
 };
@@ -108,8 +101,6 @@ $(document).ready(function(){
 	});
 	$(`.thumbnail`).click(function(){
 		current_lightbox_index = Number($(this).attr(`data-index`));
-		display_lightbox();
+		display_lightbox(current_lightbox_index);
 	});
 });
-
-// What do we need to do? Make the prev/next function wait until after the image to be "populated" before attempting to add the event listener. This seems like a case for async/await.
