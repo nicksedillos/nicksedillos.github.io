@@ -104,3 +104,5 @@ $(document).ready(function(){
 		display_lightbox(current_lightbox_index);
 	});
 });
+
+// Add an event handler to #lightbox which detects the click target and executes controls as desired (via event delegation).
