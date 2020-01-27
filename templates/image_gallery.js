@@ -106,3 +106,28 @@ $(document).ready(function(){
 });
 
 // Add an event handler to #lightbox which detects the click target and executes controls as desired (via event delegation).
+// Click/hover behaviors
+//   - Close button (Appears on hover. Closes the lightbox.)
+//   - Lightbox background (Closes the lightbox.)
+//   - Previous button (Appears on hover, when not on first image. Goes to previous image.)
+//   - Next button (Appears on hover, when not on last image. Goes to next image.)
+//   - Main image (Same as Next button, except that on the final image it closes the lightbox.)
+// PSEUDOCODE
+// 1. Add an event handler to #lightbox for hovering.
+//   a. Hover on prev/next/close buttons displays the controls.
+// 2. Add an event handler to #lightbox for clicking.
+//   a. Clicking anywhere displays the controls.
+//   b. Clicking background or close button closes the lightbox.
+//   c. Clicking previous goes to previous.
+//   d. Clicking next goes to next.
+//   e. If not on last, clicking main image goes to next.
+//   f. If on the last image, clicking main image closes the lightbox.
+// SAMPLE CODE
+// // A click listener for a <ul> which identifies which of its <li>s was clicked.
+// document.getElementById("parent-list").addEventListener("click", function(e) {
+//   // If e.target (the clicked element) was a list item…
+//   if(e.target && e.target.nodeName == "LI") {
+//     // …log the list item’s ID.
+//     console.log("List item ", e.target.id.replace("post-", ""), " was clicked!");
+//   };
+// });
