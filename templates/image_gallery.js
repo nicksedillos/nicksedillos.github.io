@@ -34,6 +34,9 @@ function display_lightbox(){
 	const lightbox_image_box = document.getElementById(`lightbox_image_box`);
 	const lightbox_previous_button = document.querySelector(`.previous_button`);
 	const lightbox_next_button = document.querySelector(`.next_button`);
+	// Wake the lightbox controls on click or mousemove.
+	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
+	lightbox.addEventListener(`mouseup`, lightbox_wake_controls);
 	// Display the lightbox.
 	$(`#lightbox`).fadeIn(`fast`);
 	// Close the lightbox when user clicks on the background.
@@ -65,9 +68,6 @@ function display_lightbox(){
 		lightbox_next_button.classList.remove(`present`);
 		lightbox_next_button.classList.add(`absent`);
 	};
-	// Wake the lightbox controls on click or mousemove.
-	lightbox.addEventListener(`mousemove`, lightbox_wake_controls);
-	lightbox.addEventListener(`mouseup`, lightbox_wake_controls);
 };
 
 // Close the lightbox when Escape key is pressed.
