@@ -12,7 +12,8 @@ function lightbox_previous(){
 };
 
 // Increase the current_index_number by 1, then re-render lightbox.
-function lightbox_next(){
+const lightbox_next = function(){
+	console.log(`lightbox next fired`);
 	current_lightbox_index = current_lightbox_index + 1;
 	display_lightbox();
 };
@@ -45,6 +46,7 @@ function display_lightbox(){
 	lightbox_image_box.innerHTML = `
 		<img id="lightbox_current_image" src="${gallery_contents[current_lightbox_index].fullsize}">
 	`;
+	const lightbox_current_image = document.getElementById(`lightbox_current_image`);
 	// Populate with the correct caption.
 	lightbox_caption_box.innerHTML = `
 		<p>${gallery_contents[current_lightbox_index].caption}</p>
@@ -67,6 +69,7 @@ function display_lightbox(){
 	} else {
 		lightbox_next_button.classList.remove(`present`);
 		lightbox_next_button.classList.add(`absent`);
+		lightbox_current_image.addEventListener(`mouseup`, lightbox_next());
 	};
 };
 
