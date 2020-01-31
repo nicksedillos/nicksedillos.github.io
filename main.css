@@ -46,9 +46,9 @@
 	#lightbox {display: none; height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1; background-color: rgba(0,0,0,0.80); backdrop-filter: blur(5px); text-align: center; color: hsla(0,0%,60%,100%); fill: hsla(0,0%,60%,100%);}
 	#lightbox_background {height: 100%; width: 100%; position: fixed; top: 0; right: 0; z-index: 1;}
 	#lightbox_controls {z-index: 2; position: relative;}
-		#lightbox_controls svg.close_button {position: fixed; top: 2%; right: 2%; height:1.5rem; width:1.5rem; cursor:pointer;}
-		#lightbox_controls svg.previous_button {position: fixed; top: 43%; left: 2%; height:1.5rem; width:1.5rem; cursor:pointer;}
-		#lightbox_controls svg.next_button {position: fixed; top: 43%; right: 2%; height:1.5rem; width:1.5rem; cursor:pointer;}
+		#lightbox_controls svg.close_button {position: fixed; top: 2%; right: 2%; height:3rem; width:3rem; cursor:pointer;}
+		#lightbox_controls svg.previous_button {position: fixed; top: 43%; left: 2%; height:3rem; width:3rem; cursor:pointer;}
+		#lightbox_controls svg.next_button {position: fixed; top: 43%; right: 2%; height:3rem; width:3rem; cursor:pointer;}
 	#lightbox_caption_box { height: 8%; max-width: 96%; margin: 2% auto; overflow-y: auto; }
 		#lightbox_caption_box p, div#lightbox_caption_box p em {margin: 0 auto; color: hsla(0, 0%, 60%, 100%)}
 	#lightbox_current_image {max-height: 100%; max-width: 96%; position: absolute; top: 50%; right: 50%; transform: translateY(-50%) translateX(50%); z-index: 1;}
