@@ -32,7 +32,7 @@
 		nav svg.icon {width:1.5rem; height:1.5rem;}
 	footer {margin: 1rem auto 1rem auto; max-width: 95%;}
 	article {margin: 0 auto 0 auto; max-width: 60rem;}
-		article h1, article h2 {text-align: left;}
+		article h1, article h2, article ol {text-align: left;}
 /* Abstract classes */
 	.absent {display: none;}
 	.allcaps { text-transform: uppercase; }

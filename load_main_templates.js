@@ -36,6 +36,11 @@ function build_table_of_contents(){
 			<li><a href="#${article.id}">${article.title}</a></li>
 		`);
 	});
+	$(table_of_contents).append(`
+		<svg class="icon">
+			<use href="/icons.svg#divider"/>
+		</svg>
+	`);
 };
 
 // Load templates when called in the document.
