@@ -14,12 +14,13 @@
 		img.thumbnail {height:10rem; padding:0.5em; cursor: pointer;}
 	p {max-width: 60rem; font-size: 1rem; font-weight: normal; margin: 0 0.5rem 0.5rem 0.5rem; text-align: justify;}
 		p::first-line { text-indent: 2rem; }
-		p.centered {margin: 0.5rem auto 0.5rem auto;}
+		p.centered {margin: 0 auto 0.5rem auto;}
 			p.centered::first-line {text-indent: 0;}
 		p.small, p.small a {font-size: 0.6rem;}
 	span.close_button { text-align: right; }
 	strong {font-weight: bold;}
-	svg.icon {height:1rem; width:1rem;}
+	svg.icon {height: 1rem; width: 1rem;}
+	svg.divider {margin: 1rem 0 1rem 0;}
 	ul {text-align: left; list-style-position: inside;}
 		ul#table_of_contents {text-align: center; list-style-type: none; line-height: 1.5rem;}
 /* Sectioning elements */
@@ -30,7 +31,7 @@
 		nav a {margin: 0 1rem 0 1rem; font-size: 1.5rem;}
 			nav a:first-child {margin-left: 0;}
 		nav svg.icon {width:1.5rem; height:1.5rem;}
-	footer {margin: 1rem auto 1rem auto; max-width: 95%;}
+	footer {margin: 0 auto 0 auto; max-width: 95%;}
 	article {margin: 0 auto 0 auto; max-width: 60rem;}
 		article h1, article h2, article ol {text-align: left;}
 /* Abstract classes */

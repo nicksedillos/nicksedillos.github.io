@@ -19,7 +19,7 @@ function collate_articles(){
 				// Add links to top and dividers at end of articles.
 				$(element).append(`
 					<p><a class="link_to_top" href=".">^</a></p>
-					<svg class="icon">
+					<svg class="icon divider">
 						<use href="/icons.svg#divider"/>
 					</svg>
 				`);
@@ -37,7 +37,7 @@ function build_table_of_contents(){
 		`);
 	});
 	$(table_of_contents).append(`
-		<svg class="icon">
+		<svg class="icon divider">
 			<use href="/icons.svg#divider"/>
 		</svg>
 	`);
