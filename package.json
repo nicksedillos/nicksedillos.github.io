@@ -17,6 +17,6 @@
   "homepage": "https://github.com/nicksedillos/nicksedillos.github.io#readme",
   "dependencies": {},
   "devDependencies": {
-    "reload": "^3.1.0"
+    "reload": "^3.2.1"
   }
 }
